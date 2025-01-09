@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Terraform Apply') {
+            steps {
+                sh 'cd terraform && terraform init && terraform apply -auto-approve'
+            }
+        }
+        stage('SonarQube Scan') {
+            steps {
+                sh 'sonar-scanner'
+            }
+        }
+    }
+}
