@@ -1,0 +1,21 @@
+automated-aws-deployment/
+├── README.md
+├── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── provider.tf
+├── jenkins/
+│   ├── Jenkinsfile
+│   └── scripts/
+│       ├── deploy.sh
+│       └── configure-jenkins.sh
+├── sonar/
+│   └── sonar-project.properties
+├── scripts/
+│   ├── setup-infra.sh
+│   ├── monitor-infra.sh
+│   └── cleanup.sh
+├── diagrams/
+│   └── architecture-diagram.png
+└── LICENSE
